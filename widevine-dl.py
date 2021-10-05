@@ -52,9 +52,9 @@ def download_drm_content(mpd_url):
 	
 	divider()
 	print("Downloading Encrypted Video from CDN..")	
-	os.system(f'yt-dlp -o "{TEMPORARY_PATH}/encrypted_video.%(ext)s" --no-warnings --external-downloader aria2c --allow-unplayable-formats --no-check-certificate -f {VIDEO_ID} "{mpd_url}" -o "{TEMPORARY_PATH}/encrypted_video.%(ext)s"')
+	os.system(f'yt-dlp -o "--no-warnings --external-downloader aria2c --allow-unplayable-formats --no-check-certificate -f {VIDEO_ID} "{mpd_url}" -o "{TEMPORARY_PATH}/encrypted_video.%(ext)s"')
 	print("Downloading Encrypted Audio from CDN..")
-	os.system(f'yt-dlp -o "{TEMPORARY_PATH}/encrypted_audio.%(ext)s" --no-warnings --external-downloader aria2c --allow-unplayable-formats --no-check-certificate -f {AUDIO_ID} "{mpd_url}"')
+	os.system(f'yt-dlp -o "{--no-warnings --external-downloader aria2c --allow-unplayable-formats --no-check-certificate -f {AUDIO_ID} "{mpd_url}"')
 
 VIDEO_ID = "video_avc1"
 AUDIO_ID = "audio_und_mp4a"
